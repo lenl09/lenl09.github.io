@@ -111,28 +111,6 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2"><a  href="/blog/">The Onominute</a></div>
-  </div>
-  <text class="text-lg">
-    This is <a  href="/blog/"><b>The Onominute</b></a>, a collection of my documentation and notes for learning various scientific topics. The name itself refers to the average number of times I realized my mistakes while learning a new topic, in a single sitting.
-  </text>
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
-
-  <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10"><a href="/projects">Publications</a></div>
   </div>
 
@@ -184,6 +162,28 @@ const last_posts = posts.slice(0, 3);
     abstract="Light–matter interaction between quantum emitters and optical cavities plays a vital role in fundamental quantum photonics and the development of optoelectronics. Resonant metasurfaces are proven to be an efficient platform for tailoring the spontaneous emission (SE) of the emitters. In this work, we study the interplay between quasi-2D perovskites and dielectric TiO2 metasurfaces. The metasurface, functioning as an open cavity, enhances electric fields near its plane, thereby influencing the emissions of the perovskite. This is verified through angle-resolved photoluminescence (PL) studies. We also conducted reflectivity measurements and numerical simulations to validate the coupling between the quasi-2D perovskites and photonic modes. Notably, our work introduces a spatial mapping approach to study Purcell enhancement. Using fluorescence lifetime imaging microscopy (FLIM), we directly link the PL and lifetimes of the quasi-2D perovskites in spatial distribution when positioned on the metasurface. This correlation provides unprecedented insights into emitter distribution and emitter–resonator interactions. The methodology opens a new (to the best of our knowledge) approach for studies in quantum optics, optoelectronics, and medical imaging by enabling spatial mapping of both PL intensity and lifetime, differentiating between uncoupled quantum emitters and those coupled with different types of resonators."
     url="https://opg.optica.org/ol/abstract.cfm?uri=ol-49-9-2465"
   />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2"><a  href="/blog/">The Onominute</a></div>
+  </div>
+  <text class="text-lg">
+    This is <a  href="/blog/"><b>The Onominute</b></a>, a collection of my documentation and notes for learning various scientific topics. The name itself refers to the average number of times I realized my mistakes while learning a new topic, in a single sitting.
+  </text>
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10"><a href="/projects">Teaching</a></div>
