@@ -13,78 +13,98 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Len!</div>
-    <div class="text-3xl py-3 font-bold">PhD Student @ University of Toronto</div>
-    <div class="py-2">
+    <div class="pb-12 mt-5">
+  <!-- ROW: headings + intro (left) and headshot (right) -->
+  <div class="flex flex-col md:flex-row md:items-start gap-6">
+    <!-- LEFT -->
+    <div class="flex-1">
+      <div class="text-xl py-1">Hey there 👋</div>
+      <div class="text-5xl font-bold">I'm Len!</div>
+      <div class="text-3xl py-3 font-bold">PhD Student @ University of Toronto</div>
+
       <text class="text-lg">
         <p>
-          My name is <span class="tooltip focus:ring-4 focus:outline-none focus:ring-current bg-gray-50 hover:bg-gray-10 rounded-md py-0 px-1 border border-gray-200 hover:border-gray-100" data-tip="🌎 First: Nhan | Last: Luong">Luong Ha Tri Nhan (🇻🇳)</span>, but most people call me Len! I graduated from Monash University with a Bachelor Honours degree in Computer Science in 2022. I joined the <a class="link" target="_blank" href="https://compimaging.dgp.toronto.edu/">Toronto Computational Imaging Group</a> (under the <a class="link" target="_blank" href="https://dgp.toronto.edu/">Dynamic Graphics Project Lab</a>) to start my PhD in September 2024. My current work is broadly in the realm of <b>differentiable radiative transfer for astronomical imaging</b>.
+          My name is
+          <span
+            class="tooltip focus:ring-4 focus:outline-none focus:ring-current bg-gray-50 hover:bg-gray-10 rounded-md py-0 px-1 border border-gray-200 hover:border-gray-100"
+            data-tip="🌎 First: Nhan | Last: Luong"
+          >Luong Ha Tri Nhan (🇻🇳)</span>, but most people call me Len! I graduated from Monash University with an Honours degree in Computer Science. I'm currently a PhD student at the
+          <a class="link" target="_blank" href="https://compimaging.dgp.toronto.edu/">Toronto Computational Imaging Group</a>
+          (under <a class="link" target="_blank" href="https://dgp.toronto.edu/">Dynamic Graphics Project</a>). My current work is broadly in the realm of <b>differentiable radiative transfer for astronomical imaging</b>.
         </p>
-
-        <div tabindex="0" class="collapse my-2 collapse-arrow rounded-lg border border-current">
-          <input type="checkbox" />
-          <div class="collapse-title text-lg font-bold">Academic interests</div>
-          <div class="collapse-content">
-            <p>I am an aspiring computational scientist with a research interest that lies in the intersection of computer science, astronomy, and (astro)physics. Within the field of computer science, my primary interests are within <b>visual computing</b> (computational imaging, computer vision, computer graphics, visualization) as well as <b>data-intensive science</b> (numerical methods, simulation, data processing, deep learning). I'm also passionate about teaching and inspiring new generation of scientists and engineers by cultivating their love for science and technology.</p>
-          </div>
-        </div>
-
-        <div tabindex="0" class="collapse my-2 collapse-arrow rounded-lg border border-current">
-          <input type="checkbox" />
-          <div class="collapse-title text-lg font-bold">Other interests</div>
-          <div class="collapse-content">
-            <div class="mt-4 leading-normal text-md ">Outside of research, I enjoy reading and learning about sciences, philosophy, and visual arts. I'm a hobbyist photographer, with a particular interest in still life, pets, and street photography.</div>
-            <div class="mt-4 leading-normal text-md ">I have two cats, <span class="tooltip" data-tip="Cam (as in camera 📸, but is also 🇻🇳 for orange 🍊) and Chanh (🇻🇳 for lemon 🍋). It's a quirky double word play which was absolutely not intentional.">Cam and Chanh</span>, and you can find them <a class="btn btn-outline px-1 min-h-0 h-6 p-0" target="_blank" href="https://www.instagram.com/cameowra.roll/">here</a>.</div>
-            <Image class="mt-4 mask rounded-3xl" format="webp" width={650} height={350} src="/camchanh.jpg" alt="Cam (right) & Chanh (left)" />
-            <div class="mt-4 leading-normal text-md ">I love scuba diving (fun fact: I got to see a whaleshark on my second ever dive), my next goal is to learn how to freedive! </div>
-          </div>
-        </div>
-
-        <div tabindex="0" class="collapse my-2 collapse-arrow rounded-lg border border-current">
-          <input type="checkbox" />
-          <div class="collapse-title text-lg font-bold">Contact</div>
-          <div class="collapse-content">
-            <p class="py-2">
-              You can email me at:
-              <ul>
-                <li>• <a class="link" href="mailto:len@cs.toronto.edu">len@cs.toronto.edu</a> for work-related enquiries, or</li>
-                <li>• <a class="link" href="mailto:hatrinhanluong@gmail.com">hatrinhanluong@gmail.com</a> for other matters.</li>
-              </ul>
-            </p>
-            <p class="py-2 mt-2">
-              You can find me at <b>BA 7222</b> most of the time:
-            </p>
-            <p>
-              <p><b>Bahen Centre for Information Technology</b></p>
-              <p>Department of Computer Science</p>
-              <p>University of Toronto</p>
-              <p>Room 7222, 7th Floor</p>
-              <p>40 St. George Street</p>
-              <p>Toronto, ON M5S 2E4</p>
-            </p>
-
-          </div>
-        </div>
-
-        <p class="py-2">
+        <p class="py-2 text-lg">
           On this site, you can also find my blog, <span class="tooltip" data-tip="Tom Scott defines the 'onosecond' as: The second after you make a terrible mistake. The Onominute (or 60 onoseconds) is a collection of my documentation and notes for learning various scientific topics. The name itself refers to the average number of times I realized my mistakes while learning a new topic, in a single sitting."><em>The Onominute</em></span>, where I write about various things that I'm learning.
         </p>
-
-    
       </text>
     </div>
-    <div class="mt-2">
-      <a class="btn btn-outline" href="https://twitter.com/len_luong09" target="_blank"> Let's connect!</a>
-      <a class="btn btn-outline" href="/blog"> My Blog</a>
-      <a class="btn btn-outline" href="/projects"> My Work</a>
-      <a class="btn btn-outline" href="mailto:len@cs.toronto.edu" target="_blank"> Email me</a>
-      <!-- <a href="https://twitter.com/len_luong09" target="_blank" class="btn btn-outline ml-5">
-        Let's connect!
-      </a> -->
+
+    <!-- RIGHT: headshot -->
+    <div class="md:ml-6 md:w-56 lg:w-64 shrink-0 self-stretch rounded-2xl overflow-hidden aspect-[3/4]">
+    <img
+        src="/headshot_dcs_portrait.png"
+        alt="Portrait of Len"
+        class="w-full h-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
     </div>
   </div>
+
+  <!-- after flex row: full-width content -->
+  <div class="mt-4">
+    <div tabindex="0" class="collapse my-2 collapse-arrow rounded-lg border border-current">
+      <input type="checkbox" />
+      <div class="collapse-title text-lg font-bold">Academic interests</div>
+      <div class="collapse-content">
+        <p>I am an aspiring computational scientist with a research interest that lies in the intersection of computer science, astronomy, and (astro)physics. Within the field of computer science, my primary interests are within <b>visual computing</b> (computational imaging, computer vision, computer graphics, visualization) as well as <b>data-intensive science</b> (numerical methods, simulation, data processing, deep learning). I'm also passionate about teaching and inspiring new generation of scientists and engineers by cultivating their love for science and technology.</p>
+      </div>
+    </div>
+
+    <div tabindex="0" class="collapse my-2 collapse-arrow rounded-lg border border-current">
+      <input type="checkbox" />
+      <div class="collapse-title text-lg font-bold">Other interests</div>
+      <div class="collapse-content">
+        <div class="mt-4 leading-normal text-md ">Outside of research, I enjoy reading and learning about sciences, philosophy, and visual arts. I'm a hobbyist photographer, with a particular interest in still life, pets, and street photography.</div>
+        <div class="mt-4 leading-normal text-md ">I have two cats, <span class="tooltip" data-tip="Cam (as in camera 📸, but is also 🇻🇳 for orange 🍊) and Chanh (🇻🇳 for lemon 🍋). It's a quirky double word play which was absolutely not intentional.">Cam and Chanh</span>, and you can find them <a class="btn btn-outline px-1 min-h-0 h-6 p-0" target="_blank" href="https://www.instagram.com/cameowra.roll/">here</a>.</div>
+        <Image class="mt-4 mask rounded-3xl" format="webp" width={650} height={350} src="/camchanh.jpg" alt="Cam (right) & Chanh (left)" />
+        <div class="mt-4 leading-normal text-md ">I love scuba diving (fun fact: I got to see a whaleshark on my second ever dive), my next goal is to learn how to freedive! </div>
+      </div>
+    </div>
+
+    <div tabindex="0" class="collapse my-2 collapse-arrow rounded-lg border border-current">
+      <input type="checkbox" />
+      <div class="collapse-title text-lg font-bold">Contact</div>
+      <div class="collapse-content">
+        <p class="py-2">
+          You can email me at:
+          <ul>
+            <li>• <a class="link" href="mailto:len@cs.toronto.edu">len@cs.toronto.edu</a> for work-related enquiries, or</li>
+            <li>• <a class="link" href="mailto:hatrinhanluong@gmail.com">hatrinhanluong@gmail.com</a> for other matters.</li>
+          </ul>
+        </p>
+        <p class="py-2 mt-2">
+          You can find me at <b>BA 7222</b> most of the time:
+        </p>
+        <p>
+          <p><b>Bahen Centre for Information Technology</b></p>
+          <p>Department of Computer Science</p>
+          <p>University of Toronto</p>
+          <p>Room 7222, 7th Floor</p>
+          <p>40 St. George Street</p>
+          <p>Toronto, ON M5S 2E4</p>
+        </p>
+      </div>
+    </div>
+    <div class="mt-2">
+        <a class="btn btn-outline" href="https://twitter.com/len_luong09" target="_blank"> Let's connect!</a>
+        <a class="btn btn-outline" href="/blog"> My Blog</a>
+        <a class="btn btn-outline" href="/projects"> My Projects</a>
+        <a class="btn btn-outline" href="mailto:len@cs.toronto.edu" target="_blank"> Email me</a>
+      </div>
+  </div>
+</div>
+
+
 
     <div class="text-3xl w-full font-bold mb-2">Updates</div>
 
